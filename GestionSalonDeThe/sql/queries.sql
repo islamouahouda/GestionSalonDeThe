@@ -1,6 +1,7 @@
 --CREATE DATABASE SalonDeTheDB;
 use SalonDeTheDB;
 
+
 -- Création de la table Serveurs
 CREATE TABLE Serveurs (
     IdServeur INT PRIMARY KEY IDENTITY(1,1),
