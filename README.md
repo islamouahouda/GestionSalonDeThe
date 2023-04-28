@@ -2,7 +2,7 @@
 
 # Tp: Réalisation d’une application Gestion d’un Salon de Thé
 
-### Pr. A. BENABBOU ADO .net 
+## Objectifs 
 
 **Objectif :** Réaliser une application de Gestion d’un Salon de Thé. On suppose que le salon sert uniquement des boissons.
 
@@ -29,14 +29,14 @@ Table BoissonsCommandées :
 - #Id Commande
 - Quantité commandée
 
-### Fonctionnalités :
+## Fonctionnalités :
 
 - Gestion des serveurs
 - Gestion des boissons
 - Gestion des commandes
 - Lister pour chaque serveur le bilan des commandes de la journée
 
-### Architecture des forms 
+## Architecture des forms 
 
 1. **Gestion des serveurs**
     - FormServeurs
