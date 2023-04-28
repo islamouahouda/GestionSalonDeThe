@@ -26,5 +26,11 @@ namespace GestionSalonDeThe.BACKEND.ENTITIES
         {
             Console.WriteLine($"Id: {IdServeur}, Nom: {Nom}, Prénom: {Prenom}");
         }
+
+        public override string ToString()
+        {
+            return $"{Prenom}, {Nom}";
+        }
+
     }
 }

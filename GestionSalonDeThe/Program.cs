@@ -1,3 +1,11 @@
+using System;
+using System.Windows.Forms;
+using GestionSalonDeThe.backend.dao.sqlserver;
+using GestionSalonDeThe.backend.services;
+using GestionSalonDeThe.backend.services.sqlserver_services;
+using Microsoft.Extensions.DependencyInjection;
+using GestionSalonDeThe.backend.dao;
+
 namespace GestionSalonDeThe
 {
     internal static class Program
@@ -8,33 +16,39 @@ namespace GestionSalonDeThe
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-
             ApplicationConfiguration.Initialize();
-            // initialiser le backend
-            InitializeBackend(); 
-            Application.Run(new Form1());
+
+            // Configure Dependency Injection
+            var services = new ServiceCollection();
+            ConfigureServices(services);
+            var serviceProvider = services.BuildServiceProvider();
+
+            // Run the application with the configured services
+            using (var scope = serviceProvider.CreateScope())
+            {
+                Application.Run(new Form1(
+                    scope.ServiceProvider.GetRequiredService<IServeurService>(),
+                    scope.ServiceProvider.GetRequiredService<ICommandeService>(),
+                    scope.ServiceProvider.GetRequiredService<IBoissonService>(),
+                    scope.ServiceProvider.GetRequiredService<IBoissonCommandeeService>()));
+            }
         }
 
-        private static void InitializeBackend()
+        private static void ConfigureServices(IServiceCollection services)
         {
             string connectionString = "Data Source=localhost;Initial Catalog=SalonDeTheDB;Integrated Security=True";
 
-            // DAO instances
-            var serveurDAO = new GestionSalonDeThe.backend.dao.sqlserver.ServeurDAO(connectionString);
-            var commandeDAO = new GestionSalonDeThe.backend.dao.sqlserver.CommandeDAO(connectionString);
-            var boissonDAO = new GestionSalonDeThe.backend.dao.sqlserver.BoissonDAO(connectionString);
-            var boissonCommandeeDAO = new GestionSalonDeThe.backend.dao.sqlserver.BoissonCommandeeDAO(connectionString);
+            // DAO
+            services.AddSingleton<IServeurDAO>(new ServeurDAO(connectionString));
+            services.AddSingleton<ICommandeDAO>(new CommandeDAO(connectionString));
+            services.AddSingleton<IBoissonDAO>(new BoissonDAO(connectionString));
+            services.AddSingleton<IBoissonCommandeeDAO>(new BoissonCommandeeDAO(connectionString));
 
-            // Service instances
-            var serveurService = new GestionSalonDeThe.backend.services.sqlserver_services.ServeurService(serveurDAO);
-            var commandeService = new GestionSalonDeThe.backend.services.sqlserver_services.CommandeService(commandeDAO);
-            var boissonService = new GestionSalonDeThe.backend.services.sqlserver_services.BoissonService(boissonDAO);
-            var boissonCommandeeService = new GestionSalonDeThe.backend.services.sqlserver_services.BoissonCommandeeService(boissonCommandeeDAO);
-
-            // Pass the service instances to your forms or other classes as needed
-            // Example: var form1 = new Form1(serveurService, commandeService, boissonService, boissonCommandeeService);
+            // Services
+            services.AddSingleton<IServeurService, ServeurService>();
+            services.AddSingleton<ICommandeService, CommandeService>();
+            services.AddSingleton<IBoissonService, BoissonService>();
+            services.AddSingleton<IBoissonCommandeeService, BoissonCommandeeService>();
         }
     }
 }
