@@ -1,6 +1,6 @@
+--sql code for init git
 --CREATE DATABASE SalonDeTheDB;
 use SalonDeTheDB;
-
 
 -- Création de la table Serveurs
 CREATE TABLE Serveurs (
