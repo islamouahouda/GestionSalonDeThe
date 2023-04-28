@@ -36,7 +36,5 @@ namespace GestionSalonDeThe
             // Pass the service instances to your forms or other classes as needed
             // Example: var form1 = new Form1(serveurService, commandeService, boissonService, boissonCommandeeService);
         }
-
-
     }
 }
