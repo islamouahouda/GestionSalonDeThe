@@ -1,9 +1,7 @@
-﻿using GestionSalonDeThe.BACKEND.ENTITIES;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
+using GestionSalonDeThe.BACKEND.ENTITIES;
 
 namespace GestionSalonDeThe.backend.dao.sqlserver
 {
@@ -16,29 +14,109 @@ namespace GestionSalonDeThe.backend.dao.sqlserver
             _connectionString = connectionString;
         }
 
-        void IBoissonDAO.AddBoisson(Boisson boisson)
+        public void AddBoisson(Boisson boisson)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("INSERT INTO Boissons (Designation, Prix, QteStock) VALUES (@designation, @prix, @qteStock)", connection))
+                {
+                    command.Parameters.AddWithValue("@designation", boisson.Designation);
+                    command.Parameters.AddWithValue("@prix", boisson.Prix);
+                    command.Parameters.AddWithValue("@qteStock", boisson.QteStock);
+
+                    command.ExecuteNonQuery();
+                }
+            }
         }
 
-        void IBoissonDAO.DeleteBoisson(int idBoisson)
+        public void DeleteBoisson(int idBoisson)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("DELETE FROM Boissons WHERE IdBoisson = @idBoisson", connection))
+                {
+                    command.Parameters.AddWithValue("@idBoisson", idBoisson);
+
+                    command.ExecuteNonQuery();
+                }
+            }
         }
 
-        List<Boisson> IBoissonDAO.GetAllBoissons()
+        public List<Boisson> GetAllBoissons()
         {
-            throw new NotImplementedException();
+            List<Boisson> boissons = new List<Boisson>();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("SELECT * FROM Boissons", connection))
+                {
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        Boisson boisson = new Boisson
+                        {
+                            IdBoisson = (int)reader["IdBoisson"],
+                            Designation = (string)reader["Designation"],
+                            Prix = (decimal)reader["Prix"],
+                            QteStock = (int)reader["QteStock"]
+                        };
+
+                        boissons.Add(boisson);
+                    }
+                }
+            }
+
+            return boissons;
         }
 
-        Boisson IBoissonDAO.GetBoissonById(int idBoisson)
+        public Boisson GetBoissonById(int idBoisson)
         {
-            throw new NotImplementedException();
+            Boisson boisson = null;
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("SELECT * FROM Boissons WHERE IdBoisson = @idBoisson", connection))
+                {
+                    command.Parameters.AddWithValue("@idBoisson", idBoisson);
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        boisson = new Boisson
+                        {
+                            IdBoisson = (int)reader["IdBoisson"],
+                            Designation = (string)reader["Designation"],
+                            Prix = (decimal)reader["Prix"],
+                            QteStock = (int)reader["QteStock"]
+                        };
+                    }
+                }
+            }
+
+            return boisson;
         }
 
-        void IBoissonDAO.UpdateBoisson(Boisson boisson)
+        public void UpdateBoisson(Boisson boisson)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("UPDATE Boissons SET Designation = @designation, Prix = @prix, QteStock = @qteStock WHERE IdBoisson = @idBoisson", connection))
+                {
+                    command.Parameters.AddWithValue("@idBoisson", boisson.IdBoisson);
+                    command.Parameters.AddWithValue("@designation", boisson.Designation);
+                    command.Parameters.AddWithValue("@prix", boisson.Prix);
+                    command.Parameters.AddWithValue("@qteStock", boisson.QteStock);
+
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }
