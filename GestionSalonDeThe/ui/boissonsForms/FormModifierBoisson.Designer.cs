@@ -1,6 +1,6 @@
-﻿namespace GestionSalonDeThe.ui.serveurForms
+﻿namespace GestionSalonDeThe.ui.boissonsForms
 {
-    partial class FormModifierServeur
+    partial class FormModifierBoisson
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtPrenomServeur = new TextBox();
-            txtNomServeur = new TextBox();
-            txtIdServeur = new TextBox();
+            txtQteStock = new TextBox();
+            txtPrix = new TextBox();
+            txtNom = new TextBox();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -38,100 +38,98 @@
             btnAjouter = new Button();
             SuspendLayout();
             // 
-            // txtPrenomServeur
+            // txtQteStock
             // 
-            txtPrenomServeur.Location = new Point(137, 89);
-            txtPrenomServeur.Name = "txtPrenomServeur";
-            txtPrenomServeur.Size = new Size(159, 23);
-            txtPrenomServeur.TabIndex = 15;
+            txtQteStock.Location = new Point(151, 90);
+            txtQteStock.Name = "txtQteStock";
+            txtQteStock.Size = new Size(161, 23);
+            txtQteStock.TabIndex = 17;
             // 
-            // txtNomServeur
+            // txtPrix
             // 
-            txtNomServeur.Location = new Point(137, 60);
-            txtNomServeur.Name = "txtNomServeur";
-            txtNomServeur.Size = new Size(159, 23);
-            txtNomServeur.TabIndex = 14;
+            txtPrix.Location = new Point(85, 61);
+            txtPrix.Name = "txtPrix";
+            txtPrix.Size = new Size(227, 23);
+            txtPrix.TabIndex = 16;
             // 
-            // txtIdServeur
+            // txtNom
             // 
-            txtIdServeur.Enabled = false;
-            txtIdServeur.Location = new Point(134, 31);
-            txtIdServeur.Name = "txtIdServeur";
-            txtIdServeur.Size = new Size(162, 23);
-            txtIdServeur.TabIndex = 13;
+            txtNom.Location = new Point(85, 35);
+            txtNom.Name = "txtNom";
+            txtNom.Size = new Size(227, 23);
+            txtNom.TabIndex = 15;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(24, 94);
+            label3.Location = new Point(45, 93);
             label3.Name = "label3";
-            label3.Size = new Size(107, 15);
-            label3.TabIndex = 12;
-            label3.Text = "prénom du serveur";
+            label3.Size = new Size(100, 15);
+            label3.TabIndex = 14;
+            label3.Text = "Quantité en stock";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(24, 64);
+            label2.Location = new Point(45, 69);
             label2.Name = "label2";
-            label2.Size = new Size(90, 15);
-            label2.TabIndex = 11;
-            label2.Text = "nom du serveur";
+            label2.Size = new Size(27, 15);
+            label2.TabIndex = 13;
+            label2.Text = "Prix";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(24, 34);
+            label1.Location = new Point(45, 38);
             label1.Name = "label1";
-            label1.Size = new Size(79, 15);
-            label1.TabIndex = 10;
-            label1.Text = " ID du serveur";
+            label1.Size = new Size(34, 15);
+            label1.TabIndex = 12;
+            label1.Text = "Nom";
             // 
             // btnAnnuler
             // 
-            btnAnnuler.Location = new Point(137, 147);
+            btnAnnuler.Location = new Point(299, 153);
             btnAnnuler.Name = "btnAnnuler";
             btnAnnuler.Size = new Size(75, 23);
-            btnAnnuler.TabIndex = 9;
+            btnAnnuler.TabIndex = 11;
             btnAnnuler.Text = "Annuler";
             btnAnnuler.UseVisualStyleBackColor = true;
             btnAnnuler.Click += btnAnnuler_Click;
             // 
             // btnAjouter
             // 
-            btnAjouter.Location = new Point(221, 147);
+            btnAjouter.Location = new Point(380, 153);
             btnAjouter.Name = "btnAjouter";
             btnAjouter.Size = new Size(75, 23);
-            btnAjouter.TabIndex = 8;
+            btnAjouter.TabIndex = 10;
             btnAjouter.Text = "Confirmer";
             btnAjouter.UseVisualStyleBackColor = true;
             btnAjouter.Click += btnAjouter_Click;
             // 
-            // FormModifierServeur
+            // FormModifierBoisson
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(322, 190);
-            Controls.Add(txtPrenomServeur);
-            Controls.Add(txtNomServeur);
-            Controls.Add(txtIdServeur);
+            ClientSize = new Size(489, 200);
+            Controls.Add(txtQteStock);
+            Controls.Add(txtPrix);
+            Controls.Add(txtNom);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnAnnuler);
             Controls.Add(btnAjouter);
-            Name = "FormModifierServeur";
-            Text = "FormModifierServeur";
-            Load += FormModifierServeur_Load;
+            Name = "FormModifierBoisson";
+            Text = "FormModifierBoisson";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox txtPrenomServeur;
-        private TextBox txtNomServeur;
-        private TextBox txtIdServeur;
+        private TextBox txtQteStock;
+        private TextBox txtPrix;
+        private TextBox txtNom;
         private Label label3;
         private Label label2;
         private Label label1;

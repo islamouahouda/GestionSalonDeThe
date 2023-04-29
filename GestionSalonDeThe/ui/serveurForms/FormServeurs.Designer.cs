@@ -80,13 +80,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 374);
             Controls.Add(btnSupprimer);
             Controls.Add(btnModifier);
             Controls.Add(btnAjouter);
             Controls.Add(dataGridViewServeurs);
             Name = "FormServeurs";
             Text = "FormServeurs";
+            Load += FormServeurs_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewServeurs).EndInit();
             ResumeLayout(false);
         }

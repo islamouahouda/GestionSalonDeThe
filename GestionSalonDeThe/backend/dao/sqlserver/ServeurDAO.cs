@@ -106,13 +106,31 @@ namespace GestionSalonDeThe.backend.dao.sqlserver
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand("DELETE FROM Serveurs WHERE IdServeur = @idServeur", connection))
-                {
-                    command.Parameters.AddWithValue("@idServeur", idServeur);
 
-                    command.ExecuteNonQuery();
+                // Supprimer les boissons commandées associées aux commandes de ce serveur
+                using (SqlCommand deleteOrderedDrinksCommand = new SqlCommand("DELETE FROM BoissonsCommandees WHERE IdCommande IN (SELECT IdCommande FROM Commandes WHERE IdServeur = @idServeur)", connection))
+                {
+                    deleteOrderedDrinksCommand.Parameters.AddWithValue("@idServeur", idServeur);
+                    deleteOrderedDrinksCommand.ExecuteNonQuery();
+                }
+
+                // Supprimer les commandes associées à ce serveur avant de le supprimer
+                using (SqlCommand deleteOrdersCommand = new SqlCommand("DELETE FROM Commandes WHERE IdServeur = @idServeur", connection))
+                {
+                    deleteOrdersCommand.Parameters.AddWithValue("@idServeur", idServeur);
+                    deleteOrdersCommand.ExecuteNonQuery();
+                }
+
+                // Supprimer le serveur
+                using (SqlCommand deleteCommand = new SqlCommand("DELETE FROM Serveurs WHERE IdServeur = @idServeur", connection))
+                {
+                    deleteCommand.Parameters.AddWithValue("@idServeur", idServeur);
+                    deleteCommand.ExecuteNonQuery();
                 }
             }
         }
+
+
+
     }
 }

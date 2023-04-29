@@ -30,6 +30,13 @@
         {
             button1 = new Button();
             button2 = new Button();
+            menuStrip1 = new MenuStrip();
+            serveursToolStripMenuItem = new ToolStripMenuItem();
+            gestionnaireDesServerusToolStripMenuItem = new ToolStripMenuItem();
+            boissonsToolStripMenuItem = new ToolStripMenuItem();
+            gestionnaireDesBoissonsToolStripMenuItem = new ToolStripMenuItem();
+            button3 = new Button();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -52,21 +59,80 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { serveursToolStripMenuItem, boissonsToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(562, 24);
+            menuStrip1.TabIndex = 2;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // serveursToolStripMenuItem
+            // 
+            serveursToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionnaireDesServerusToolStripMenuItem });
+            serveursToolStripMenuItem.Name = "serveursToolStripMenuItem";
+            serveursToolStripMenuItem.Size = new Size(63, 20);
+            serveursToolStripMenuItem.Text = "Serveurs";
+            // 
+            // gestionnaireDesServerusToolStripMenuItem
+            // 
+            gestionnaireDesServerusToolStripMenuItem.Name = "gestionnaireDesServerusToolStripMenuItem";
+            gestionnaireDesServerusToolStripMenuItem.Size = new Size(208, 22);
+            gestionnaireDesServerusToolStripMenuItem.Text = "Gestionnaire des Serveurs";
+            gestionnaireDesServerusToolStripMenuItem.Click += gestionnaireDesServerusToolStripMenuItem_Click;
+            // 
+            // boissonsToolStripMenuItem
+            // 
+            boissonsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionnaireDesBoissonsToolStripMenuItem });
+            boissonsToolStripMenuItem.Name = "boissonsToolStripMenuItem";
+            boissonsToolStripMenuItem.Size = new Size(65, 20);
+            boissonsToolStripMenuItem.Text = "Boissons";
+            // 
+            // gestionnaireDesBoissonsToolStripMenuItem
+            // 
+            gestionnaireDesBoissonsToolStripMenuItem.Name = "gestionnaireDesBoissonsToolStripMenuItem";
+            gestionnaireDesBoissonsToolStripMenuItem.Size = new Size(210, 22);
+            gestionnaireDesBoissonsToolStripMenuItem.Text = "Gestionnaire des boissons";
+            gestionnaireDesBoissonsToolStripMenuItem.Click += gestionnaireDesBoissonsToolStripMenuItem_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(12, 488);
+            button3.Name = "button3";
+            button3.Size = new Size(265, 23);
+            button3.TabIndex = 3;
+            button3.Text = "Gestionnaire de Boissons";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(562, 552);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "MainForm";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button button1;
         private Button button2;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem serveursToolStripMenuItem;
+        private ToolStripMenuItem gestionnaireDesServerusToolStripMenuItem;
+        private ToolStripMenuItem boissonsToolStripMenuItem;
+        private ToolStripMenuItem gestionnaireDesBoissonsToolStripMenuItem;
+        private Button button3;
     }
 }

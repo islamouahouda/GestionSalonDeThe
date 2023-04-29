@@ -31,16 +31,16 @@
             btnAjouter = new Button();
             btnAnnuler = new Button();
             label1 = new Label();
+            txtIdServeur = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            txtIdServeur = new TextBox();
             txtNomServeur = new TextBox();
             txtPrenomServeur = new TextBox();
             SuspendLayout();
             // 
             // btnAjouter
             // 
-            btnAjouter.Location = new Point(713, 415);
+            btnAjouter.Location = new Point(364, 165);
             btnAjouter.Name = "btnAjouter";
             btnAjouter.Size = new Size(75, 23);
             btnAjouter.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // btnAnnuler
             // 
-            btnAnnuler.Location = new Point(632, 415);
+            btnAnnuler.Location = new Point(283, 165);
             btnAnnuler.Name = "btnAnnuler";
             btnAnnuler.Size = new Size(75, 23);
             btnAnnuler.TabIndex = 1;
@@ -66,6 +66,13 @@
             label1.Size = new Size(79, 15);
             label1.TabIndex = 2;
             label1.Text = " ID du serveur";
+            // 
+            // txtIdServeur
+            // 
+            txtIdServeur.Location = new Point(145, 49);
+            txtIdServeur.Name = "txtIdServeur";
+            txtIdServeur.Size = new Size(162, 23);
+            txtIdServeur.TabIndex = 5;
             // 
             // label2
             // 
@@ -85,13 +92,6 @@
             label3.TabIndex = 4;
             label3.Text = "prénom du serveur";
             // 
-            // txtIdServeur
-            // 
-            txtIdServeur.Location = new Point(145, 49);
-            txtIdServeur.Name = "txtIdServeur";
-            txtIdServeur.Size = new Size(162, 23);
-            txtIdServeur.TabIndex = 5;
-            // 
             // txtNomServeur
             // 
             txtNomServeur.Location = new Point(148, 78);
@@ -110,7 +110,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(488, 215);
             Controls.Add(txtPrenomServeur);
             Controls.Add(txtNomServeur);
             Controls.Add(txtIdServeur);
@@ -130,9 +130,9 @@
         private Button btnAjouter;
         private Button btnAnnuler;
         private Label label1;
+        private TextBox txtIdServeur;
         private Label label2;
         private Label label3;
-        private TextBox txtIdServeur;
         private TextBox txtNomServeur;
         private TextBox txtPrenomServeur;
     }

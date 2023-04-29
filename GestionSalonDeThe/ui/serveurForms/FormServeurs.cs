@@ -104,5 +104,10 @@ namespace GestionSalonDeThe.ui
             btnModifier.Enabled = hasSelectedRow;
             btnSupprimer.Enabled = hasSelectedRow;
         }
+
+        private void FormServeurs_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,5 +1,6 @@
 using GestionSalonDeThe.backend.services;
 using GestionSalonDeThe.ui;
+using GestionSalonDeThe.ui.boissonsForms;
 using System.Text;
 
 namespace GestionSalonDeThe
@@ -49,9 +50,26 @@ namespace GestionSalonDeThe
             fs.Show();
         }
 
+        private void gestionnaireDesServerusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormServeurs fs = new FormServeurs(_serveurService);
+            fs.Show();
+        }
+
+        private void gestionnaireDesBoissonsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBoissons bs = new FormBoissons(_boissonService);
+            bs.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormBoissons bs = new FormBoissons(_boissonService);
+            bs.Show();
+        }
 
 
-        //util
+        //util pour le debug
         string GetTop3Items<T>(IList<T> items)
         {
             StringBuilder sb = new StringBuilder();
@@ -62,6 +80,5 @@ namespace GestionSalonDeThe
             }
             return sb.ToString();
         }
-
     }
 }
