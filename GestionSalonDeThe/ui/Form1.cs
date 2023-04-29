@@ -1,4 +1,5 @@
 using GestionSalonDeThe.backend.services;
+using GestionSalonDeThe.ui;
 using System.Text;
 
 namespace GestionSalonDeThe
@@ -40,6 +41,12 @@ namespace GestionSalonDeThe
                                $"- Serveur avec le plus de commandes: {(serveurAvecLePlusDeCommandes == null ? "N/A" : serveurAvecLePlusDeCommandes.ToString())}";
 
             MessageBox.Show(debugInfo, "Debug Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormServeurs fs = new FormServeurs(_serveurService);
+            fs.Show();
         }
 
 
