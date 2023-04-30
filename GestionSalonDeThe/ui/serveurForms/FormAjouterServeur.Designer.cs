@@ -30,8 +30,6 @@
         {
             btnAjouter = new Button();
             btnAnnuler = new Button();
-            label1 = new Label();
-            txtIdServeur = new TextBox();
             label2 = new Label();
             label3 = new Label();
             txtNomServeur = new TextBox();
@@ -57,22 +55,6 @@
             btnAnnuler.Text = "Annuler";
             btnAnnuler.UseVisualStyleBackColor = true;
             btnAnnuler.Click += btnAnnuler_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(35, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(79, 15);
-            label1.TabIndex = 2;
-            label1.Text = " ID du serveur";
-            // 
-            // txtIdServeur
-            // 
-            txtIdServeur.Location = new Point(145, 49);
-            txtIdServeur.Name = "txtIdServeur";
-            txtIdServeur.Size = new Size(162, 23);
-            txtIdServeur.TabIndex = 5;
             // 
             // label2
             // 
@@ -113,10 +95,8 @@
             ClientSize = new Size(488, 215);
             Controls.Add(txtPrenomServeur);
             Controls.Add(txtNomServeur);
-            Controls.Add(txtIdServeur);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(btnAnnuler);
             Controls.Add(btnAjouter);
             Name = "FormAjouterServeur";
@@ -129,8 +109,6 @@
 
         private Button btnAjouter;
         private Button btnAnnuler;
-        private Label label1;
-        private TextBox txtIdServeur;
         private Label label2;
         private Label label3;
         private TextBox txtNomServeur;

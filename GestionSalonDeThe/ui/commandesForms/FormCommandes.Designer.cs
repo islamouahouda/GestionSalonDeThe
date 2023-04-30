@@ -86,7 +86,6 @@
             Controls.Add(dataGridViewBoissons);
             Name = "FormCommandes";
             Text = "FormCommandes";
-            Load += FormCommandes_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewBoissons).EndInit();
             ResumeLayout(false);
         }

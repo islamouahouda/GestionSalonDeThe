@@ -22,7 +22,7 @@ namespace GestionSalonDeThe.ui.serveurForms
         {
             Serveur serveur = new Serveur
             {
-                IdServeur = int.Parse(txtIdServeur.Text),
+                IdServeur = 0,
                 Nom = txtNomServeur.Text,
                 Prenom = txtPrenomServeur.Text
             };

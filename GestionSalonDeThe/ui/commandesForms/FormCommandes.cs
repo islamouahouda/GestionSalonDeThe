@@ -25,11 +25,6 @@ namespace GestionSalonDeThe.ui.commandesForms
             LoadCommandes();
         }
 
-        private void FormCommandes_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void LoadCommandes()
         {
             List<Commande> commandes = _commandeService.GetAllCommandes();
@@ -64,6 +59,7 @@ namespace GestionSalonDeThe.ui.commandesForms
 
         }
 
+        //supprimer la commande
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
             int idCommande = GetSelectedCommandeId();
