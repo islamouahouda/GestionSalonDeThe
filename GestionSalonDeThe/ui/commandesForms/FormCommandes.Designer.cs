@@ -43,6 +43,7 @@
             dataGridViewBoissons.RowTemplate.Height = 25;
             dataGridViewBoissons.Size = new Size(776, 319);
             dataGridViewBoissons.TabIndex = 5;
+            dataGridViewBoissons.SelectionChanged += dataGridViewBoissons_SelectionChanged;
             // 
             // btnSupprimer
             // 

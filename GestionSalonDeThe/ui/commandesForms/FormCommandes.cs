@@ -1,4 +1,5 @@
 ﻿using GestionSalonDeThe.backend.services;
+using GestionSalonDeThe.BACKEND.ENTITIES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,19 +32,33 @@ namespace GestionSalonDeThe.ui.commandesForms
 
         private void LoadCommandes()
         {
-            // TODO: Charger la liste des commandes et mettre à jour le DataGridView
+            List<Commande> commandes = _commandeService.GetAllCommandes();
+            dataGridViewBoissons.DataSource = commandes;
+            UpdateButtons();
         }
 
         private void UpdateButtons()
         {
-            // TODO: Activer ou désactiver les boutons Détails et Supprimer en fonction de la sélection
+            bool hasSelectedRow = dataGridViewBoissons.SelectedRows.Count > 0;
+            btnModifier.Enabled = hasSelectedRow;
+            btnSupprimer.Enabled = hasSelectedRow;
+        }
+        private int GetSelectedCommandeId()
+        {
+            if (dataGridViewBoissons.SelectedRows.Count > 0)
+            {
+                return (int)dataGridViewBoissons.SelectedRows[0].Cells["IdCommande"].Value;
+            }
+            return -1;
         }
 
+        //ajouter une commande
         private void btnAjouter_Click(object sender, EventArgs e)
         {
 
         }
 
+        //modifier une commande
         private void btnModifier_Click(object sender, EventArgs e)
         {
 
@@ -51,7 +66,21 @@ namespace GestionSalonDeThe.ui.commandesForms
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
+            int idCommande = GetSelectedCommandeId();
+            if (idCommande != -1)
+            {
+                DialogResult result = MessageBox.Show("Voulez-vous vraiment supprimer cette commande ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    _commandeService.DeleteCommande(idCommande);
+                    LoadCommandes();
+                }
+            }
+        }
 
+        private void dataGridViewBoissons_SelectionChanged(object sender, EventArgs e)
+        {
+            UpdateButtons();
         }
     }
 }

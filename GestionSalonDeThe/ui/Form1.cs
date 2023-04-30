@@ -1,6 +1,7 @@
 using GestionSalonDeThe.backend.services;
 using GestionSalonDeThe.ui;
 using GestionSalonDeThe.ui.boissonsForms;
+using GestionSalonDeThe.ui.commandesForms;
 using System.Text;
 
 namespace GestionSalonDeThe
@@ -66,6 +67,18 @@ namespace GestionSalonDeThe
         {
             FormBoissons bs = new FormBoissons(_boissonService);
             bs.Show();
+        }
+
+        private void gestionnaireDeCommandesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCommandes fs = new FormCommandes(_commandeService, _serveurService);
+            fs.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FormCommandes fs = new FormCommandes(_commandeService, _serveurService);
+            fs.Show();
         }
 
 

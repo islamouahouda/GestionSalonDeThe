@@ -36,6 +36,9 @@
             boissonsToolStripMenuItem = new ToolStripMenuItem();
             gestionnaireDesBoissonsToolStripMenuItem = new ToolStripMenuItem();
             button3 = new Button();
+            button4 = new Button();
+            commandesToolStripMenuItem = new ToolStripMenuItem();
+            gestionnaireDeCommandesToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,7 +64,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { serveursToolStripMenuItem, boissonsToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { serveursToolStripMenuItem, boissonsToolStripMenuItem, commandesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(562, 24);
@@ -106,11 +109,36 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // button4
+            // 
+            button4.Location = new Point(12, 459);
+            button4.Name = "button4";
+            button4.Size = new Size(265, 23);
+            button4.TabIndex = 4;
+            button4.Text = "Gestionnaire de Commandes";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // commandesToolStripMenuItem
+            // 
+            commandesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionnaireDeCommandesToolStripMenuItem });
+            commandesToolStripMenuItem.Name = "commandesToolStripMenuItem";
+            commandesToolStripMenuItem.Size = new Size(87, 20);
+            commandesToolStripMenuItem.Text = "Commandes";
+            // 
+            // gestionnaireDeCommandesToolStripMenuItem
+            // 
+            gestionnaireDeCommandesToolStripMenuItem.Name = "gestionnaireDeCommandesToolStripMenuItem";
+            gestionnaireDeCommandesToolStripMenuItem.Size = new Size(227, 22);
+            gestionnaireDeCommandesToolStripMenuItem.Text = "Gestionnaire de Commandes";
+            gestionnaireDeCommandesToolStripMenuItem.Click += gestionnaireDeCommandesToolStripMenuItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(562, 552);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -134,5 +162,8 @@
         private ToolStripMenuItem boissonsToolStripMenuItem;
         private ToolStripMenuItem gestionnaireDesBoissonsToolStripMenuItem;
         private Button button3;
+        private ToolStripMenuItem commandesToolStripMenuItem;
+        private ToolStripMenuItem gestionnaireDeCommandesToolStripMenuItem;
+        private Button button4;
     }
 }
