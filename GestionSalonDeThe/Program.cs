@@ -5,6 +5,8 @@ using GestionSalonDeThe.backend.services;
 using GestionSalonDeThe.backend.services.sqlserver_services;
 using Microsoft.Extensions.DependencyInjection;
 using GestionSalonDeThe.backend.dao;
+using System.Data.SqlClient;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace GestionSalonDeThe
 {
@@ -26,7 +28,9 @@ namespace GestionSalonDeThe
             // Run the application with the configured services
             using (var scope = serviceProvider.CreateScope())
             {
+
                 Application.Run(new Form1(
+                     "Data Source=localhost;Initial Catalog=SalonDeTheDB;Integrated Security=True",
                     scope.ServiceProvider.GetRequiredService<IServeurService>(),
                     scope.ServiceProvider.GetRequiredService<ICommandeService>(),
                     scope.ServiceProvider.GetRequiredService<IBoissonService>(),

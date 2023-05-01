@@ -2,6 +2,7 @@ using GestionSalonDeThe.backend.services;
 using GestionSalonDeThe.ui;
 using GestionSalonDeThe.ui.boissonsForms;
 using GestionSalonDeThe.ui.commandesForms;
+using GestionSalonDeThe.ui.reporting;
 using System.Text;
 
 namespace GestionSalonDeThe
@@ -12,14 +13,15 @@ namespace GestionSalonDeThe
         private readonly ICommandeService _commandeService;
         private readonly IBoissonService _boissonService;
         private readonly IBoissonCommandeeService _boissonCommandeeService;
+        private readonly string _connectionString;
 
-        public Form1(IServeurService serveurService, ICommandeService commandeService, IBoissonService boissonService, IBoissonCommandeeService boissonCommandeeService)
+        public Form1(string connectionString, IServeurService serveurService, ICommandeService commandeService, IBoissonService boissonService, IBoissonCommandeeService boissonCommandeeService)
         {
             _serveurService = serveurService;
             _commandeService = commandeService;
             _boissonService = boissonService;
             _boissonCommandeeService = boissonCommandeeService;
-
+            _connectionString = connectionString;
             InitializeComponent();
         }
 
@@ -79,6 +81,12 @@ namespace GestionSalonDeThe
         {
             FormCommandes fs = new FormCommandes(_commandeService, _serveurService, _boissonService);
             fs.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormReporting fr = new FormReporting(_connectionString);
+            fr.Show();
         }
 
 
