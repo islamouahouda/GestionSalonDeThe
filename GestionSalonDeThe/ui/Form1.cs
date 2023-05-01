@@ -71,13 +71,13 @@ namespace GestionSalonDeThe
 
         private void gestionnaireDeCommandesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormCommandes fs = new FormCommandes(_commandeService, _serveurService);
+            FormCommandes fs = new FormCommandes(_commandeService, _serveurService, _boissonService);
             fs.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormCommandes fs = new FormCommandes(_commandeService, _serveurService);
+            FormCommandes fs = new FormCommandes(_commandeService, _serveurService, _boissonService);
             fs.Show();
         }
 

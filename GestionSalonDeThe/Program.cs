@@ -38,10 +38,13 @@ namespace GestionSalonDeThe
         {
             string connectionString = "Data Source=localhost;Initial Catalog=SalonDeTheDB;Integrated Security=True";
 
+            var boissonDAO = new BoissonDAO(connectionString);
+            var serveurDAO = new ServeurDAO(connectionString);
+
             // DAO
             services.AddSingleton<IServeurDAO>(new ServeurDAO(connectionString));
-            services.AddSingleton<ICommandeDAO>(new CommandeDAO(connectionString));
             services.AddSingleton<IBoissonDAO>(new BoissonDAO(connectionString));
+            services.AddSingleton<ICommandeDAO>(new CommandeDAO(connectionString, boissonDAO, serveurDAO));
             services.AddSingleton<IBoissonCommandeeDAO>(new BoissonCommandeeDAO(connectionString));
 
             // Services

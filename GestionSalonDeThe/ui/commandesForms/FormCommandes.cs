@@ -1,4 +1,5 @@
 ﻿using GestionSalonDeThe.backend.services;
+using GestionSalonDeThe.backend.services.sqlserver_services;
 using GestionSalonDeThe.BACKEND.ENTITIES;
 using System;
 using System.Collections.Generic;
@@ -16,33 +17,35 @@ namespace GestionSalonDeThe.ui.commandesForms
     {
         private ICommandeService _commandeService;
         private IServeurService _serveurService;
+        private IBoissonService _boissonService;
 
-        public FormCommandes(ICommandeService commandeService, IServeurService serveurService)
+        public FormCommandes(ICommandeService commandeService, IServeurService serveurService, IBoissonService boissonService)
         {
             InitializeComponent();
             _commandeService = commandeService;
             _serveurService = serveurService;
             LoadCommandes();
+            _boissonService = boissonService;
         }
 
         private void LoadCommandes()
         {
             List<Commande> commandes = _commandeService.GetAllCommandes();
-            dataGridViewBoissons.DataSource = commandes;
+            dataGridViewCommandes.DataSource = commandes;
             UpdateButtons();
         }
 
         private void UpdateButtons()
         {
-            bool hasSelectedRow = dataGridViewBoissons.SelectedRows.Count > 0;
+            bool hasSelectedRow = dataGridViewCommandes.SelectedRows.Count > 0;
             btnModifier.Enabled = hasSelectedRow;
             btnSupprimer.Enabled = hasSelectedRow;
         }
         private int GetSelectedCommandeId()
         {
-            if (dataGridViewBoissons.SelectedRows.Count > 0)
+            if (dataGridViewCommandes.SelectedRows.Count > 0)
             {
-                return (int)dataGridViewBoissons.SelectedRows[0].Cells["IdCommande"].Value;
+                return (int)dataGridViewCommandes.SelectedRows[0].Cells["IdCommande"].Value;
             }
             return -1;
         }
@@ -50,13 +53,37 @@ namespace GestionSalonDeThe.ui.commandesForms
         //ajouter une commande
         private void btnAjouter_Click(object sender, EventArgs e)
         {
+            FormAjouterCommande formAjouterCommande = new FormAjouterCommande(_commandeService, _serveurService, _boissonService);
+            DialogResult result = formAjouterCommande.ShowDialog();
 
+            if (result == DialogResult.OK)
+            {
+                // Recharger la liste des commandes après l'ajout
+                LoadCommandes();
+            }
         }
 
         //modifier une commande
         private void btnModifier_Click(object sender, EventArgs e)
         {
+            if (dataGridViewCommandes.SelectedRows.Count > 0)
+            {
+                int selectedCommandeId = Convert.ToInt32(dataGridViewCommandes.SelectedRows[0].Cells["IdCommande"].Value);
+                Commande selectedCommande = _commandeService.GetCommandeById(selectedCommandeId);
 
+                FormModifierCommande formModifierCommande = new FormModifierCommande(selectedCommande, _commandeService, _serveurService);
+                DialogResult result = formModifierCommande.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    // Recharger la liste des commandes après la modification
+                    LoadCommandes();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez sélectionner une commande à modifier.", "Erreur de sélection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //supprimer la commande

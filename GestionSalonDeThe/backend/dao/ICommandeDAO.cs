@@ -14,5 +14,8 @@ namespace GestionSalonDeThe.backend.dao
         void AddCommande(Commande commande);
         void UpdateCommande(Commande commande);
         void DeleteCommande(int idCommande);
+
+        List<BoissonCommandee> GetBoissonsCommandeesByCommandeId(int idCommande); // Ajoutez cette ligne
+
     }
 }

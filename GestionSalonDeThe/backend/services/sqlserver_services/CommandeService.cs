@@ -37,5 +37,11 @@ namespace GestionSalonDeThe.backend.services.sqlserver_services
         {
             _commandeDAO.DeleteCommande(idCommande);
         }
+
+        public List<BoissonCommandee> RecupererBoissonsCommandees(int idCommande)
+        {
+            return _commandeDAO.GetBoissonsCommandeesByCommandeId(idCommande);
+        }
+
     }
 }

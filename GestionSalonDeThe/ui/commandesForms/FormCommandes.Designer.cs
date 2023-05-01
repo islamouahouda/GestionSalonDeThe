@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridViewBoissons = new DataGridView();
+            dataGridViewCommandes = new DataGridView();
             btnSupprimer = new Button();
             btnModifier = new Button();
             btnAjouter = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewBoissons).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCommandes).BeginInit();
             SuspendLayout();
             // 
-            // dataGridViewBoissons
+            // dataGridViewCommandes
             // 
-            dataGridViewBoissons.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBoissons.Location = new Point(12, 12);
-            dataGridViewBoissons.Name = "dataGridViewBoissons";
-            dataGridViewBoissons.RowTemplate.Height = 25;
-            dataGridViewBoissons.Size = new Size(776, 319);
-            dataGridViewBoissons.TabIndex = 5;
-            dataGridViewBoissons.SelectionChanged += dataGridViewBoissons_SelectionChanged;
+            dataGridViewCommandes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCommandes.Location = new Point(12, 12);
+            dataGridViewCommandes.Name = "dataGridViewCommandes";
+            dataGridViewCommandes.RowTemplate.Height = 25;
+            dataGridViewCommandes.Size = new Size(776, 319);
+            dataGridViewCommandes.TabIndex = 5;
+            dataGridViewCommandes.SelectionChanged += dataGridViewBoissons_SelectionChanged;
             // 
             // btnSupprimer
             // 
@@ -83,16 +83,16 @@
             Controls.Add(btnSupprimer);
             Controls.Add(btnModifier);
             Controls.Add(btnAjouter);
-            Controls.Add(dataGridViewBoissons);
+            Controls.Add(dataGridViewCommandes);
             Name = "FormCommandes";
             Text = "FormCommandes";
-            ((System.ComponentModel.ISupportInitialize)dataGridViewBoissons).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCommandes).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridViewBoissons;
+        private DataGridView dataGridViewCommandes;
         private Button btnSupprimer;
         private Button btnModifier;
         private Button btnAjouter;
