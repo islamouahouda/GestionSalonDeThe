@@ -50,7 +50,7 @@ namespace GestionSalonDeThe
         private void button2_Click(object sender, EventArgs e)
         {
             FormServeurs fs = new FormServeurs(_serveurService);
-            fs.Show();
+            fs.ShowDialog();
         }
 
         private void gestionnaireDesServerusToolStripMenuItem_Click(object sender, EventArgs e)

@@ -18,6 +18,7 @@ namespace GestionSalonDeThe
         [STAThread]
         static void Main()
         {
+
             ApplicationConfiguration.Initialize();
 
             // Configure Dependency Injection
@@ -26,9 +27,10 @@ namespace GestionSalonDeThe
             var serviceProvider = services.BuildServiceProvider();
 
             // Run the application with the configured services
+            // L'injection dépendance
+
             using (var scope = serviceProvider.CreateScope())
             {
-
                 Application.Run(new Form1(
                      "Data Source=localhost;Initial Catalog=SalonDeTheDB;Integrated Security=True",
                     scope.ServiceProvider.GetRequiredService<IServeurService>(),

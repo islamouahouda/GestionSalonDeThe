@@ -26,8 +26,7 @@ namespace GestionSalonDeThe.ui
 
         private void LoadServeurs()
         {
-            List<Serveur> serveurs = _serveurService.GetAllServeurs();
-            dataGridViewServeurs.DataSource = serveurs;
+            dataGridViewServeurs.DataSource = _serveurService.GetAllServeurs(); ;
             UpdateButtons();
         }
 
@@ -41,8 +40,15 @@ namespace GestionSalonDeThe.ui
         }
 
 
+        /*
+         L'utilisation de using dans ce cas est un moyen de s'assurer que les ressources non gérées associées à l'objet 
+        FormAjouterServeur sont correctement libérées une fois que le bloc using est terminé.
+         */
         private void btnAjouter_Click_1(object sender, EventArgs e)
         {
+            //garbage collector
+            //gonna  create it and delete it ! nice
+
             using (FormAjouterServeur formAjouterServeur = new FormAjouterServeur())
             {
                 DialogResult result = formAjouterServeur.ShowDialog();
@@ -53,6 +59,9 @@ namespace GestionSalonDeThe.ui
                     LoadServeurs();
                 }
             }
+
+            // ici il y aura plus de formAjouterServeur :( est c'est pour ce que using is good !
+            // garbageeeeee
         }
 
         private void btnModifier_Click_1(object sender, EventArgs e)
@@ -101,6 +110,7 @@ namespace GestionSalonDeThe.ui
         private void UpdateButtons()
         {
             bool hasSelectedRow = dataGridViewServeurs.SelectedRows.Count > 0;
+            // WOW !
             btnModifier.Enabled = hasSelectedRow;
             btnSupprimer.Enabled = hasSelectedRow;
         }

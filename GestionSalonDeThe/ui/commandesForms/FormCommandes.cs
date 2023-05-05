@@ -105,5 +105,10 @@ namespace GestionSalonDeThe.ui.commandesForms
         {
             UpdateButtons();
         }
+
+        private void FormCommandes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

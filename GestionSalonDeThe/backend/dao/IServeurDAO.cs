@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace GestionSalonDeThe.backend.dao
 {
+    //Ceci s'appel CRUD
     public interface IServeurDAO
     {
         List<Serveur> GetAllServeurs();
