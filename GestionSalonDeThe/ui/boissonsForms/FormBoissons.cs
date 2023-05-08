@@ -102,5 +102,10 @@ namespace GestionSalonDeThe.ui.boissonsForms
             UpdateButtons();
 
         }
+
+        private void btnAjouter_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

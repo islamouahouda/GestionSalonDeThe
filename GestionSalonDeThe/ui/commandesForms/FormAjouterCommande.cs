@@ -134,5 +134,9 @@ namespace GestionSalonDeThe.ui.commandesForms
             txtTotal.Text = total.ToString("0.00");
         }
 
+        private void btnAjouterBoisson_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

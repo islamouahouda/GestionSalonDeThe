@@ -28,81 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnAjouter = new Button();
-            btnAnnuler = new Button();
-            label2 = new Label();
-            label3 = new Label();
-            txtNomServeur = new TextBox();
-            txtPrenomServeur = new TextBox();
-            SuspendLayout();
+            this.btnAjouter = new System.Windows.Forms.Button();
+            this.btnAnnuler = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNomServeur = new System.Windows.Forms.TextBox();
+            this.txtPrenomServeur = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // btnAjouter
             // 
-            btnAjouter.Location = new Point(231, 119);
-            btnAjouter.Name = "btnAjouter";
-            btnAjouter.Size = new Size(75, 23);
-            btnAjouter.TabIndex = 0;
-            btnAjouter.Text = "Confirmer";
-            btnAjouter.UseVisualStyleBackColor = true;
-            btnAjouter.Click += btnAjouter_Click;
+            this.btnAjouter.Location = new System.Drawing.Point(264, 159);
+            this.btnAjouter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.Size = new System.Drawing.Size(86, 31);
+            this.btnAjouter.TabIndex = 0;
+            this.btnAjouter.Text = "Confirmer";
+            this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click_1);
             // 
             // btnAnnuler
             // 
-            btnAnnuler.Location = new Point(150, 119);
-            btnAnnuler.Name = "btnAnnuler";
-            btnAnnuler.Size = new Size(75, 23);
-            btnAnnuler.TabIndex = 1;
-            btnAnnuler.Text = "Annuler";
-            btnAnnuler.UseVisualStyleBackColor = true;
-            btnAnnuler.Click += btnAnnuler_Click;
+            this.btnAnnuler.Location = new System.Drawing.Point(171, 159);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(86, 31);
+            this.btnAnnuler.TabIndex = 1;
+            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(34, 34);
-            label2.Name = "label2";
-            label2.Size = new Size(90, 15);
-            label2.TabIndex = 3;
-            label2.Text = "nom du serveur";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(39, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "nom du serveur";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(34, 64);
-            label3.Name = "label3";
-            label3.Size = new Size(107, 15);
-            label3.TabIndex = 4;
-            label3.Text = "prénom du serveur";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(39, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "prénom du serveur";
             // 
             // txtNomServeur
             // 
-            txtNomServeur.Location = new Point(147, 30);
-            txtNomServeur.Name = "txtNomServeur";
-            txtNomServeur.Size = new Size(159, 23);
-            txtNomServeur.TabIndex = 6;
+            this.txtNomServeur.Location = new System.Drawing.Point(168, 40);
+            this.txtNomServeur.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNomServeur.Name = "txtNomServeur";
+            this.txtNomServeur.Size = new System.Drawing.Size(181, 27);
+            this.txtNomServeur.TabIndex = 6;
             // 
             // txtPrenomServeur
             // 
-            txtPrenomServeur.Location = new Point(147, 59);
-            txtPrenomServeur.Name = "txtPrenomServeur";
-            txtPrenomServeur.Size = new Size(159, 23);
-            txtPrenomServeur.TabIndex = 7;
+            this.txtPrenomServeur.Location = new System.Drawing.Point(168, 79);
+            this.txtPrenomServeur.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPrenomServeur.Name = "txtPrenomServeur";
+            this.txtPrenomServeur.Size = new System.Drawing.Size(181, 27);
+            this.txtPrenomServeur.TabIndex = 7;
             // 
             // FormAjouterServeur
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(342, 162);
-            Controls.Add(txtPrenomServeur);
-            Controls.Add(txtNomServeur);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(btnAnnuler);
-            Controls.Add(btnAjouter);
-            Name = "FormAjouterServeur";
-            Text = "FormAjouterServeur";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(391, 216);
+            this.Controls.Add(this.txtPrenomServeur);
+            this.Controls.Add(this.txtNomServeur);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnAnnuler);
+            this.Controls.Add(this.btnAjouter);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FormAjouterServeur";
+            this.Text = "FormAjouterServeur";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

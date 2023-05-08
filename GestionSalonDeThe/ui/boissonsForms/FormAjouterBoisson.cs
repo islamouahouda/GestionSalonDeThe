@@ -42,5 +42,14 @@ namespace GestionSalonDeThe.ui.boissonsForms
             DialogResult = DialogResult.Cancel;
         }
 
+        private void FormAjouterBoisson_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAjouter_Click_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -28,101 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnAnnuler = new Button();
-            btnAjouter = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            txtNom = new TextBox();
-            txtPrix = new TextBox();
-            txtQteStock = new TextBox();
-            SuspendLayout();
+            this.btnAnnuler = new System.Windows.Forms.Button();
+            this.btnAjouter = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNom = new System.Windows.Forms.TextBox();
+            this.txtPrix = new System.Windows.Forms.TextBox();
+            this.txtQteStock = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // btnAnnuler
             // 
-            btnAnnuler.Location = new Point(128, 137);
-            btnAnnuler.Name = "btnAnnuler";
-            btnAnnuler.Size = new Size(75, 23);
-            btnAnnuler.TabIndex = 3;
-            btnAnnuler.Text = "Annuler";
-            btnAnnuler.UseVisualStyleBackColor = true;
-            btnAnnuler.Click += btnAnnuler_Click;
+            this.btnAnnuler.Location = new System.Drawing.Point(146, 183);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(86, 31);
+            this.btnAnnuler.TabIndex = 3;
+            this.btnAnnuler.Text = "Annuler";
+            this.btnAnnuler.UseVisualStyleBackColor = true;
             // 
             // btnAjouter
             // 
-            btnAjouter.Location = new Point(209, 137);
-            btnAjouter.Name = "btnAjouter";
-            btnAjouter.Size = new Size(75, 23);
-            btnAjouter.TabIndex = 2;
-            btnAjouter.Text = "Confirmer";
-            btnAjouter.UseVisualStyleBackColor = true;
-            btnAjouter.Click += btnAjouter_Click;
+            this.btnAjouter.Location = new System.Drawing.Point(239, 183);
+            this.btnAjouter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.Size = new System.Drawing.Size(86, 31);
+            this.btnAjouter.TabIndex = 2;
+            this.btnAjouter.Text = "Confirmer";
+            this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click_1);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(34, 15);
-            label1.TabIndex = 4;
-            label1.Text = "Nom";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nom";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(12, 53);
-            label2.Name = "label2";
-            label2.Size = new Size(27, 15);
-            label2.TabIndex = 5;
-            label2.Text = "Prix";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Prix";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(12, 77);
-            label3.Name = "label3";
-            label3.Size = new Size(100, 15);
-            label3.TabIndex = 6;
-            label3.Text = "Quantité en stock";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Quantité en stock";
             // 
             // txtNom
             // 
-            txtNom.Location = new Point(52, 19);
-            txtNom.Name = "txtNom";
-            txtNom.Size = new Size(227, 23);
-            txtNom.TabIndex = 7;
+            this.txtNom.Location = new System.Drawing.Point(59, 25);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(259, 27);
+            this.txtNom.TabIndex = 7;
             // 
             // txtPrix
             // 
-            txtPrix.Location = new Point(52, 45);
-            txtPrix.Name = "txtPrix";
-            txtPrix.Size = new Size(227, 23);
-            txtPrix.TabIndex = 8;
+            this.txtPrix.Location = new System.Drawing.Point(59, 60);
+            this.txtPrix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPrix.Name = "txtPrix";
+            this.txtPrix.Size = new System.Drawing.Size(259, 27);
+            this.txtPrix.TabIndex = 8;
             // 
             // txtQteStock
             // 
-            txtQteStock.Location = new Point(118, 74);
-            txtQteStock.Name = "txtQteStock";
-            txtQteStock.Size = new Size(161, 23);
-            txtQteStock.TabIndex = 9;
+            this.txtQteStock.Location = new System.Drawing.Point(135, 99);
+            this.txtQteStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtQteStock.Name = "txtQteStock";
+            this.txtQteStock.Size = new System.Drawing.Size(183, 27);
+            this.txtQteStock.TabIndex = 9;
             // 
             // FormAjouterBoisson
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(320, 193);
-            Controls.Add(txtQteStock);
-            Controls.Add(txtPrix);
-            Controls.Add(txtNom);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(btnAnnuler);
-            Controls.Add(btnAjouter);
-            Name = "FormAjouterBoisson";
-            Text = "FormAjouterBoisson";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(366, 257);
+            this.Controls.Add(this.txtQteStock);
+            this.Controls.Add(this.txtPrix);
+            this.Controls.Add(this.txtNom);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAnnuler);
+            this.Controls.Add(this.btnAjouter);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FormAjouterBoisson";
+            this.Text = "FormAjouterBoisson";
+            this.Load += new System.EventHandler(this.FormAjouterBoisson_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

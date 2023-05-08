@@ -28,163 +28,172 @@
         /// </summary>
         private void InitializeComponent()
         {
-            cbServeurs = new ComboBox();
-            label1 = new Label();
-            label2 = new Label();
-            cbBoissons = new ComboBox();
-            nudQuantite = new NumericUpDown();
-            label3 = new Label();
-            btnAjouterBoisson = new Button();
-            dataGridViewBoissonsCommandees = new DataGridView();
-            btnSupprimerBoisson = new Button();
-            label4 = new Label();
-            txtTotal = new TextBox();
-            btnConfirmer = new Button();
-            btnAnnuler = new Button();
-            ((System.ComponentModel.ISupportInitialize)nudQuantite).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewBoissonsCommandees).BeginInit();
-            SuspendLayout();
+            this.cbServeurs = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbBoissons = new System.Windows.Forms.ComboBox();
+            this.nudQuantite = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAjouterBoisson = new System.Windows.Forms.Button();
+            this.dataGridViewBoissonsCommandees = new System.Windows.Forms.DataGridView();
+            this.btnSupprimerBoisson = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.btnConfirmer = new System.Windows.Forms.Button();
+            this.btnAnnuler = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoissonsCommandees)).BeginInit();
+            this.SuspendLayout();
             // 
             // cbServeurs
             // 
-            cbServeurs.FormattingEnabled = true;
-            cbServeurs.Location = new Point(124, 57);
-            cbServeurs.Name = "cbServeurs";
-            cbServeurs.Size = new Size(299, 23);
-            cbServeurs.TabIndex = 0;
+            this.cbServeurs.FormattingEnabled = true;
+            this.cbServeurs.Location = new System.Drawing.Point(142, 76);
+            this.cbServeurs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbServeurs.Name = "cbServeurs";
+            this.cbServeurs.Size = new System.Drawing.Size(341, 28);
+            this.cbServeurs.TabIndex = 0;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(48, 60);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Serveur:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(55, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Serveur:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(48, 90);
-            label2.Name = "label2";
-            label2.Size = new Size(56, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Boissons:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(55, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Boissons:";
             // 
             // cbBoissons
             // 
-            cbBoissons.FormattingEnabled = true;
-            cbBoissons.Location = new Point(124, 90);
-            cbBoissons.Name = "cbBoissons";
-            cbBoissons.Size = new Size(299, 23);
-            cbBoissons.TabIndex = 3;
+            this.cbBoissons.FormattingEnabled = true;
+            this.cbBoissons.Location = new System.Drawing.Point(142, 120);
+            this.cbBoissons.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbBoissons.Name = "cbBoissons";
+            this.cbBoissons.Size = new System.Drawing.Size(341, 28);
+            this.cbBoissons.TabIndex = 3;
             // 
             // nudQuantite
             // 
-            nudQuantite.Location = new Point(124, 119);
-            nudQuantite.Name = "nudQuantite";
-            nudQuantite.Size = new Size(299, 23);
-            nudQuantite.TabIndex = 4;
+            this.nudQuantite.Location = new System.Drawing.Point(142, 159);
+            this.nudQuantite.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nudQuantite.Name = "nudQuantite";
+            this.nudQuantite.Size = new System.Drawing.Size(342, 27);
+            this.nudQuantite.TabIndex = 4;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(49, 129);
-            label3.Name = "label3";
-            label3.Size = new Size(56, 15);
-            label3.TabIndex = 5;
-            label3.Text = "Quantité:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(56, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Quantité:";
             // 
             // btnAjouterBoisson
             // 
-            btnAjouterBoisson.AccessibleRole = AccessibleRole.None;
-            btnAjouterBoisson.Location = new Point(49, 162);
-            btnAjouterBoisson.Name = "btnAjouterBoisson";
-            btnAjouterBoisson.Size = new Size(184, 23);
-            btnAjouterBoisson.TabIndex = 6;
-            btnAjouterBoisson.Text = "btnAjouterBoisson";
-            btnAjouterBoisson.UseVisualStyleBackColor = true;
-            btnAjouterBoisson.Click += btnAjouterBoisson_Click;
+            this.btnAjouterBoisson.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnAjouterBoisson.Location = new System.Drawing.Point(56, 216);
+            this.btnAjouterBoisson.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAjouterBoisson.Name = "btnAjouterBoisson";
+            this.btnAjouterBoisson.Size = new System.Drawing.Size(210, 31);
+            this.btnAjouterBoisson.TabIndex = 6;
+            this.btnAjouterBoisson.Text = "btnAjouterBoisson";
+            this.btnAjouterBoisson.UseVisualStyleBackColor = true;
+            this.btnAjouterBoisson.Click += new System.EventHandler(this.btnAjouterBoisson_Click_1);
             // 
             // dataGridViewBoissonsCommandees
             // 
-            dataGridViewBoissonsCommandees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBoissonsCommandees.Location = new Point(429, 57);
-            dataGridViewBoissonsCommandees.Name = "dataGridViewBoissonsCommandees";
-            dataGridViewBoissonsCommandees.RowTemplate.Height = 25;
-            dataGridViewBoissonsCommandees.Size = new Size(480, 172);
-            dataGridViewBoissonsCommandees.TabIndex = 7;
+            this.dataGridViewBoissonsCommandees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBoissonsCommandees.Location = new System.Drawing.Point(490, 76);
+            this.dataGridViewBoissonsCommandees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridViewBoissonsCommandees.Name = "dataGridViewBoissonsCommandees";
+            this.dataGridViewBoissonsCommandees.RowHeadersWidth = 51;
+            this.dataGridViewBoissonsCommandees.RowTemplate.Height = 25;
+            this.dataGridViewBoissonsCommandees.Size = new System.Drawing.Size(549, 229);
+            this.dataGridViewBoissonsCommandees.TabIndex = 7;
             // 
             // btnSupprimerBoisson
             // 
-            btnSupprimerBoisson.Location = new Point(248, 162);
-            btnSupprimerBoisson.Name = "btnSupprimerBoisson";
-            btnSupprimerBoisson.Size = new Size(175, 23);
-            btnSupprimerBoisson.TabIndex = 8;
-            btnSupprimerBoisson.Text = "btnSupprimerBoisson";
-            btnSupprimerBoisson.UseVisualStyleBackColor = true;
-            btnSupprimerBoisson.Click += btnSupprimerBoisson_Click;
+            this.btnSupprimerBoisson.Location = new System.Drawing.Point(283, 216);
+            this.btnSupprimerBoisson.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSupprimerBoisson.Name = "btnSupprimerBoisson";
+            this.btnSupprimerBoisson.Size = new System.Drawing.Size(200, 31);
+            this.btnSupprimerBoisson.TabIndex = 8;
+            this.btnSupprimerBoisson.Text = "btnSupprimerBoisson";
+            this.btnSupprimerBoisson.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(48, 209);
-            label4.Name = "label4";
-            label4.Size = new Size(35, 15);
-            label4.TabIndex = 9;
-            label4.Text = "Total:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(55, 279);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Total:";
             // 
             // txtTotal
             // 
-            txtTotal.Location = new Point(89, 206);
-            txtTotal.Name = "txtTotal";
-            txtTotal.Size = new Size(334, 23);
-            txtTotal.TabIndex = 10;
+            this.txtTotal.Location = new System.Drawing.Point(102, 275);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(381, 27);
+            this.txtTotal.TabIndex = 10;
             // 
             // btnConfirmer
             // 
-            btnConfirmer.Location = new Point(824, 235);
-            btnConfirmer.Name = "btnConfirmer";
-            btnConfirmer.Size = new Size(83, 23);
-            btnConfirmer.TabIndex = 11;
-            btnConfirmer.Text = "btnConfirmer";
-            btnConfirmer.UseVisualStyleBackColor = true;
-            btnConfirmer.Click += btnConfirmer_Click;
+            this.btnConfirmer.Location = new System.Drawing.Point(942, 313);
+            this.btnConfirmer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnConfirmer.Name = "btnConfirmer";
+            this.btnConfirmer.Size = new System.Drawing.Size(95, 31);
+            this.btnConfirmer.TabIndex = 11;
+            this.btnConfirmer.Text = "btnConfirmer";
+            this.btnConfirmer.UseVisualStyleBackColor = true;
             // 
             // btnAnnuler
             // 
-            btnAnnuler.Location = new Point(743, 235);
-            btnAnnuler.Name = "btnAnnuler";
-            btnAnnuler.Size = new Size(75, 23);
-            btnAnnuler.TabIndex = 12;
-            btnAnnuler.Text = "btnAnnuler";
-            btnAnnuler.UseVisualStyleBackColor = true;
-            btnAnnuler.Click += btnAnnuler_Click;
+            this.btnAnnuler.Location = new System.Drawing.Point(849, 313);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(86, 31);
+            this.btnAnnuler.TabIndex = 12;
+            this.btnAnnuler.Text = "btnAnnuler";
+            this.btnAnnuler.UseVisualStyleBackColor = true;
             // 
             // FormAjouterCommande
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(931, 358);
-            Controls.Add(btnAnnuler);
-            Controls.Add(btnConfirmer);
-            Controls.Add(txtTotal);
-            Controls.Add(label4);
-            Controls.Add(btnSupprimerBoisson);
-            Controls.Add(dataGridViewBoissonsCommandees);
-            Controls.Add(btnAjouterBoisson);
-            Controls.Add(label3);
-            Controls.Add(nudQuantite);
-            Controls.Add(cbBoissons);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(cbServeurs);
-            Name = "FormAjouterCommande";
-            Text = "FormAjouterCommande";
-            ((System.ComponentModel.ISupportInitialize)nudQuantite).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewBoissonsCommandees).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1064, 477);
+            this.Controls.Add(this.btnAnnuler);
+            this.Controls.Add(this.btnConfirmer);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnSupprimerBoisson);
+            this.Controls.Add(this.dataGridViewBoissonsCommandees);
+            this.Controls.Add(this.btnAjouterBoisson);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.nudQuantite);
+            this.Controls.Add(this.cbBoissons);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbServeurs);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FormAjouterCommande";
+            this.Text = "FormAjouterCommande";
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoissonsCommandees)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

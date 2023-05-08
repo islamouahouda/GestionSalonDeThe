@@ -93,5 +93,10 @@ namespace GestionSalonDeThe.ui.commandesForms
         {
             DialogResult = DialogResult.Cancel;
         }
+
+        private void buttonModifierBoisson_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

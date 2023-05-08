@@ -41,5 +41,10 @@ namespace GestionSalonDeThe.ui.serveurForms
         {
             DialogResult = DialogResult.Cancel;
         }
+
+        private void btnAjouter_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,67 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnSupprimer = new Button();
-            btnModifier = new Button();
-            btnAjouter = new Button();
-            dataGridViewBoissons = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewBoissons).BeginInit();
-            SuspendLayout();
+            this.btnSupprimer = new System.Windows.Forms.Button();
+            this.btnModifier = new System.Windows.Forms.Button();
+            this.btnAjouter = new System.Windows.Forms.Button();
+            this.dataGridViewBoissons = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoissons)).BeginInit();
+            this.SuspendLayout();
             // 
             // btnSupprimer
             // 
-            btnSupprimer.Location = new Point(174, 337);
-            btnSupprimer.Name = "btnSupprimer";
-            btnSupprimer.Size = new Size(75, 23);
-            btnSupprimer.TabIndex = 7;
-            btnSupprimer.Text = "btnSupprimer";
-            btnSupprimer.UseVisualStyleBackColor = true;
-            btnSupprimer.Click += btnSupprimer_Click;
+            this.btnSupprimer.Location = new System.Drawing.Point(199, 449);
+            this.btnSupprimer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSupprimer.Name = "btnSupprimer";
+            this.btnSupprimer.Size = new System.Drawing.Size(86, 31);
+            this.btnSupprimer.TabIndex = 7;
+            this.btnSupprimer.Text = "btnSupprimer";
+            this.btnSupprimer.UseVisualStyleBackColor = true;
             // 
             // btnModifier
             // 
-            btnModifier.Location = new Point(93, 337);
-            btnModifier.Name = "btnModifier";
-            btnModifier.Size = new Size(75, 23);
-            btnModifier.TabIndex = 6;
-            btnModifier.Text = "btnModifier ";
-            btnModifier.UseVisualStyleBackColor = true;
-            btnModifier.Click += btnModifier_Click;
+            this.btnModifier.Location = new System.Drawing.Point(106, 449);
+            this.btnModifier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(86, 31);
+            this.btnModifier.TabIndex = 6;
+            this.btnModifier.Text = "btnModifier ";
+            this.btnModifier.UseVisualStyleBackColor = true;
             // 
             // btnAjouter
             // 
-            btnAjouter.Location = new Point(12, 337);
-            btnAjouter.Name = "btnAjouter";
-            btnAjouter.Size = new Size(75, 23);
-            btnAjouter.TabIndex = 5;
-            btnAjouter.Text = "btnAjouter";
-            btnAjouter.UseVisualStyleBackColor = true;
-            btnAjouter.Click += btnAjouter_Click;
+            this.btnAjouter.Location = new System.Drawing.Point(14, 449);
+            this.btnAjouter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.Size = new System.Drawing.Size(86, 31);
+            this.btnAjouter.TabIndex = 5;
+            this.btnAjouter.Text = "btnAjouter";
+            this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click_1);
             // 
             // dataGridViewBoissons
             // 
-            dataGridViewBoissons.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBoissons.Location = new Point(12, 12);
-            dataGridViewBoissons.Name = "dataGridViewBoissons";
-            dataGridViewBoissons.RowTemplate.Height = 25;
-            dataGridViewBoissons.Size = new Size(776, 319);
-            dataGridViewBoissons.TabIndex = 4;
-            dataGridViewBoissons.SelectionChanged += dataGridViewBoissons_SelectionChanged;
+            this.dataGridViewBoissons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBoissons.Location = new System.Drawing.Point(14, 16);
+            this.dataGridViewBoissons.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridViewBoissons.Name = "dataGridViewBoissons";
+            this.dataGridViewBoissons.RowHeadersWidth = 51;
+            this.dataGridViewBoissons.RowTemplate.Height = 25;
+            this.dataGridViewBoissons.Size = new System.Drawing.Size(887, 425);
+            this.dataGridViewBoissons.TabIndex = 4;
             // 
             // FormBoissons
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 369);
-            Controls.Add(btnSupprimer);
-            Controls.Add(btnModifier);
-            Controls.Add(btnAjouter);
-            Controls.Add(dataGridViewBoissons);
-            Name = "FormBoissons";
-            Text = "FormBoissons";
-            Load += FormBoissons_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridViewBoissons).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(914, 492);
+            this.Controls.Add(this.btnSupprimer);
+            this.Controls.Add(this.btnModifier);
+            this.Controls.Add(this.btnAjouter);
+            this.Controls.Add(this.dataGridViewBoissons);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FormBoissons";
+            this.Text = "FormBoissons";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoissons)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
